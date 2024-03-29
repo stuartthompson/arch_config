@@ -1,7 +1,7 @@
 -- Options
 require("stu.options")
 require("stu.keymaps")
-require("stu.colors")
+require('stu.highlights')
 
 -- Lazy (plugin manager)
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
