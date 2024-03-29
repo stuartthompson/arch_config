@@ -8,7 +8,7 @@ return {
       change = { text = "u" },
       delete = { text = "x" },
       topdelete = { text = "" },
-      changedelete = { text = "▎" },
+      changedelete = { text = "|" },
       untracked = { text = "?" },
     },
     on_attach = function(buffer)
