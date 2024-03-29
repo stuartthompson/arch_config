@@ -6,7 +6,7 @@ return {
     signs = {
       add = { text = "+" },
       change = { text = "u" },
-      delete = { text = "" },
+      delete = { text = "x" },
       topdelete = { text = "" },
       changedelete = { text = "▎" },
       untracked = { text = "?" },
