@@ -18,19 +18,28 @@ return {
         vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
       end
 
-      -- stylua: ignore start
+      -- Hunk navigation
       map("n", "]h", gs.next_hunk, "Next Hunk")
       map("n", "[h", gs.prev_hunk, "Prev Hunk")
       -- Stage and reset in normal and visual mode
-      map({"n","v"}, "<leader>ghs", ":Gitsigns stage_hunk<CR>", "Stage Hunk")
-      map({"n","v"}, "<leader>ghr", ":Gitsigns reset_hunk<CR>", "Reset Hunk")
-      map("n", "<leader>ghS", gs.stage_buffer, "Stage Buffer")
-      map("n", "<leader>ghu", gs.undo_stage_hunk, "Undo Stage Hunk")
-      map("n", "<leader>ghR", gs.reset_buffer, "Reset Buffer")
-      map("n", "<leader>ghp", gs.preview_hunk_inline, "Preview Hunk Inline")
-      map("n", "<leader>ghb", function() gs.blame_line({ full = true }) end, "Blame Line")
-      map("n", "<leader>ghd", gs.diffthis, "Diff This")
-      map("n", "<leader>ghD", function() gs.diffthis("~") end, "Diff This ~")
+      map({"n","v"}, "<leader>gs", ":Gitsigns stage_hunk<CR>", "Stage Hunk")
+      map({"n","v"}, "<leader>gr", ":Gitsigns reset_hunk<CR>", "Reset Hunk")
+      -- Stage buffer, reset, undo
+      map("n", "<leader>gS", gs.stage_buffer, "Stage Buffer")
+      map("n", "<leader>gu", gs.undo_stage_hunk, "Undo Stage Hunk")
+      map("n", "<leader>gR", gs.reset_buffer, "Reset Buffer")
+      map("n", "<leader>gp", gs.preview_hunk_inline, "Preview Hunk Inline")
+      map("n", "<leader>gb", function() gs.blame_line({ full = true }) end, "Blame Line")
+      -- Diff
+      map("n", "<leader>gd", gs.diffthis, "Diff This")
+      map("n", "<leader>gD", function() gs.diffthis("~") end, "Diff This ~")
+
+      -- Name <Leader>g as git commands (with which-key)
+      require('which-key').register({
+          ['<Leader>g'] = {
+              name = '+Git Commands'
+          }
+      })
     end,
   },
 } 
