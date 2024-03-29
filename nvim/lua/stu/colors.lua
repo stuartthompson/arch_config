@@ -138,6 +138,13 @@ local highlights = {
     { 'SignColumn',     gray.lightest,  bg.default                  },
 --}}}
 
+-- Diff {{{
+    { 'DiffAdd',        green.lightest, green.darkest               },
+    { 'DiffChange',     blue.lightest,  blue.darkest                },
+    { 'DiffDelete',     red.lightest,   red.darkest                 },
+    { 'DiffText',       purple.lightest,purple.darkest              },
+--}}}
+
 -- Marks and Folds {{{
     { 'FoldColumn',     fg.status,      bg.status                   },
     { 'Folded',         gray.lighter,   gray.darker                 },
