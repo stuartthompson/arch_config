@@ -18,6 +18,7 @@ return {
     return {
       options = {
         icons_enabled = true,
+        component_separators = '|',
         theme = {
           normal = { 
             a = { fg = colors.gray.lightest, bg = colors.gray.normal } ,
