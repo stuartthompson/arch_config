@@ -109,7 +109,7 @@ local highlights = {
     
     { 'Debug',          fg.default,                                 },
     { 'Directory',      blue.normal,                                },
-    { 'Error',          fg.default,     red.darkest                 },
+    { 'Error',          fg.default,     red.dark                    },
     { 'ErrorMsg',       red.normal,     bg.default                  },
     { 'Exception',      red.normal,     bg.default                  },
 
