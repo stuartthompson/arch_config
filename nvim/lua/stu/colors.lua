@@ -38,7 +38,7 @@ local colors = {
 
     -- Yellow {{{
     yellow = {
-        darkest     = '#474108',
+        darkest     = '#302b05',
         darker      = '#776d0e',
         dark        = '#a79813',
         normal      = '#eed91b',

@@ -26,7 +26,7 @@ local highlights = {
 
     { 'MatchParen',     nil,            blue.normal                 },
 
--- Columns {{{
+-- Columns & Cursors {{{
     -- Line numbers
     { 'LineNr',         green.lightest                              },
     { 'LineNrAbove',    gray.darker                                 },
@@ -35,7 +35,7 @@ local highlights = {
     -- Cursor
     { 'Cursor',         green.normal,   green.normal                },
     { 'CursorColumn',   green.normal,   green.normal                },
-    { 'CursorLine',     green.normal,   green.normal                },
+    { 'CursorLine',     yellow.lightest,yellow.darkest              },
     { 'CursorLineNr',   green.normal,   green.normal                },
 
     -- Columns
