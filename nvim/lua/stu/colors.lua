@@ -146,6 +146,7 @@ local highlights = {
 -- Popup Menus {{{
     -- Popup menu background
     { 'Pmenu',          yellow.lightest,     gray.darker,           },
+    { 'PMenuSel',       yellow.lightest,     gray.darker,           },
 --}}}
 
 -- Status {{{
