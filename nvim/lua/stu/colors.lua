@@ -1,3 +1,5 @@
+-- vim: set colorcolumn=25,41,69:
+
 -- Color Codes {{{
 -- Gray {{{
 local gray = {
@@ -118,16 +120,20 @@ local highlights = {
 
     { 'MatchParen',     nil,            blue.normal                 },
 
-    { 'LineNr',         gray.dark                                   },
+    { 'LineNr',         green.lightest                              },
+    { 'LineNrAbove',    gray.darker                                 },
+    { 'LineNrBelow',    gray.darker                                 },
 
     { 'Cursor',         green.normal,   green.normal                },
     { 'CursorColumn',   green.normal,   green.normal                },
     { 'CursorLine',     green.normal,   green.normal                },
     { 'CursorLineNr',   green.normal,   green.normal                },
 
+    { 'ColorColumn',    nil,            gray.darker                 },
+
 -- Marks and Folds {{{
     { 'FoldColumn',     fg.status,      bg.status                   },
-    { 'Folded',         fg.highlight,   bg.highlight                },
+    { 'Folded',         gray.lighter,   gray.darker                 },
 --}}}
 
 -- Search {{{
@@ -135,6 +141,11 @@ local highlights = {
     { 'Search',         fg.highlight,   bg.highlight                },
     -- Search result highlight (while typing search term)
     { 'IncSearch',      fg.highlight,   bg.highlight                },
+--}}}
+
+-- Popup Menus {{{
+    -- Popup menu background
+    { 'Pmenu',          yellow.lightest,     gray.darker,           },
 --}}}
 
 -- Status {{{
@@ -212,5 +223,4 @@ for _, link in ipairs(rustLinks) do
     vim.cmd(cmd)
 end
 --}}}
-
 
