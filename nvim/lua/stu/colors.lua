@@ -120,16 +120,23 @@ local highlights = {
 
     { 'MatchParen',     nil,            blue.normal                 },
 
+-- Columns {{{
+    -- Line numbers
     { 'LineNr',         green.lightest                              },
     { 'LineNrAbove',    gray.darker                                 },
     { 'LineNrBelow',    gray.darker                                 },
-
+    
+    -- Cursor
     { 'Cursor',         green.normal,   green.normal                },
     { 'CursorColumn',   green.normal,   green.normal                },
     { 'CursorLine',     green.normal,   green.normal                },
     { 'CursorLineNr',   green.normal,   green.normal                },
 
-    { 'ColorColumn',    nil,            gray.darker                 },
+    -- Columns
+    { 'ColorColumn',    nil,            blue.darker                 },
+    -- Sign column (left; used by git signs)
+    { 'SignColumn',     gray.lightest,  bg.default                  },
+--}}}
 
 -- Marks and Folds {{{
     { 'FoldColumn',     fg.status,      bg.status                   },
