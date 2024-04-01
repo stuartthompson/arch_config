@@ -1,6 +1,5 @@
 -- Options
 require("stu.options")
-require("stu.keymaps")
 require('stu.highlights')
 
 -- Lazy (plugin manager)
@@ -19,3 +18,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
+-- Register keymaps after lazy has loaded which-key
+require("stu.keymaps")
