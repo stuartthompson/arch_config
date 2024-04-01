@@ -7,9 +7,14 @@ return {
     end,
     opts = {
         plugins = {
+            -- The presets to load into which-key (what should show up)
             presets = {
                 operators = true,
-                motions = true
+                motions = true,
+                text_objects = true,
+                nav = true,
+                z = true,
+                g = true,
             }
         }
     }

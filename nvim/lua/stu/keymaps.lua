@@ -3,6 +3,7 @@ vim.api.nvim_set_keymap('n', '<Leader>i', ':Inspect<CR>', { noremap = true, sile
 local wk = require("which-key")
 local ts = require("telescope.builtin")
 local gs = require("gitsigns")
+local rt = require("rust-tools")
 
 -- Raw keymaps
 wk.register({
@@ -60,5 +61,24 @@ wk.register({
         d = { "<cmd>Gitsigns diffthis<cr>", "Diff this" },
         D = { function() gs.diffthis("~") end, "Diff this ~" },
     },
+    -- LSP
+    l = {
+        name = "LSP Support",
+        h = { vim.lsp.buf.hover, "Show LSP Hover" },
+    },
+    -- Rust Tools
+    r = {
+        name = "Rust Tools",
+        a = { rt.code_action_group.code_action_group, "Show Rust Tools Actions" },
+        h = { rt.hover_actions.hover_actions, "Show Rust Tools Hover" },
+    },
+    -- Tree
+    t = {
+        name = "Tree (File Explorer)",
+        t = { "<cmd>Neotree action=focus source=filesystem<cr>", "Show file tree" },
+        b = { "<cmd>Neotree action=focus source=buffers<cr>", "Show buffer tree" },
+        f = { "<cmd>Neotree action=focus<cr>", "Focus file tree" },
+        c = { "<cmd>Neotree action=close<cr>", "Close file tree" },
+    },
 }, { prefix = "<leader>" })
-
+ 
