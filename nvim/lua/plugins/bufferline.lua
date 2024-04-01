@@ -9,17 +9,6 @@
 return {
   "akinsho/bufferline.nvim",
   event = "VeryLazy",
-  keys = {
-    { "<Leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle buffer pin" },
-    { "<Leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Close other buffers" },
-    { "<Leader>br", "<Cmd>BufferLineCloseRight<CR>", desc = "Close buffers to right" },
-    { "<Leader>bl", "<Cmd>BufferLineCloseLeft<CR>", desc = "Close buffers to left" },
-    { "<Leader>b[", "<Cmd>BufferLineMovePrev<CR>", desc = "Move buffer left" },
-    { "<Leader>b]", "<Cmd>BufferLineMoveNext<CR>", desc = "Move buffer right" },
-    { "<Leader>bc", "<Cmd>bd<CR>", desc = "Close current buffer" },
-    { "[b", "<Cmd>BufferLineCyclePrev<CR>", desc = "Previous buffer" },
-    { "]b", "<Cmd>BufferLineCycleNext<CR>", desc = "Next buffer" },
-  },
   opts = {
     options = {
       always_show_bufferline = false,
