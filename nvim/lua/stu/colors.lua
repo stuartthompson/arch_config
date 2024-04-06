@@ -1,3 +1,6 @@
+-- Generated from: https://maketintsandshades.com
+-- The "normal" color codes were used to generate the other shades.
+
 -- Color Codes {{{
 local colors = {
     -- Gray {{{
@@ -38,7 +41,7 @@ local colors = {
 
     -- Yellow {{{
     yellow = {
-        darkest     = '#302b05',
+        darkest     = '#181603',
         darker      = '#776d0e',
         dark        = '#a79813',
         normal      = '#eed91b',
