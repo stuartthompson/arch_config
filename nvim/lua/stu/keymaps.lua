@@ -3,7 +3,6 @@ vim.api.nvim_set_keymap('n', '<Leader>i', ':Inspect<CR>', { noremap = true, sile
 local wk = require("which-key")
 local ts = require("telescope.builtin")
 local gs = require("gitsigns")
-local rt = require("rust-tools")
 
 -- Raw keymaps
 wk.register({
@@ -34,6 +33,16 @@ wk.register({
         ["]"] = { "<cmd>BufferLineMoveNext<cr>", "Move buffer right" },
         c = { "<cmd>bd<cr>", "Close current buffer" },
 
+    },
+    -- Debugging (nvim_dap)
+    d = {
+        name = "Debug",
+        b = { "<cmd>DapToggleBreakpoint<cr>", "Toggle breakpoint" },
+        c = { "<cmd>DapContinue<cr>", "Continue" },
+        d = { "<cmd>RustLsp debuggables<cr>", "Debuggables" },
+        x = { "<cmd>DapTerminate<cr>", "Terminate debugger" },
+        o = { "<cmd>DapStepOver<cr>", "Step over" },
+        i = { "<cmd>DapStepInto<cr>", "Step info" },
     },
     -- Telescope (Find Files)
     f = {
@@ -66,11 +75,10 @@ wk.register({
         name = "LSP Support",
         h = { vim.lsp.buf.hover, "Show LSP Hover" },
     },
-    -- Rust Tools
+    -- Rustacean
     r = {
-        name = "Rust Tools",
-        a = { rt.code_action_group.code_action_group, "Show Rust Tools Actions" },
-        h = { rt.hover_actions.hover_actions, "Show Rust Tools Hover" },
+        name = "Rustacean",
+        h = { "<cmd>RustLsp hover actions", "Show Rustacean hover popup" },
     },
     -- Tree
     t = {
