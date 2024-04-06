@@ -78,7 +78,7 @@ wk.register({
     -- Rustacean
     r = {
         name = "Rustacean",
-        h = { "<cmd>RustLsp hover actions", "Show Rustacean hover popup" },
+        h = { "<cmd>RustLsp hover actions<cr>", "Show Rustacean hover popup" },
     },
     -- Tree
     t = {
