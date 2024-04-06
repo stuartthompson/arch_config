@@ -9,9 +9,9 @@ local purple = colors.purple
 
 -- Define highlights {{{
 local highlights = {
-    { 'Normal',         gray.lightest,  gray.darkest                },
-    { 'Bold',           gray.lightest,  gray.darkest                },
-    { 'Italic',         gray.lightest,  gray.darkest                },
+    { 'Normal',         gray.lightest,  black                       },
+    { 'Bold',           gray.lightest,  black                       },
+    { 'Italic',         gray.lightest,  black                       },
     
     { 'Debug',          gray.lightest,                              },
     { 'Directory',      blue.normal,                                },
@@ -35,7 +35,7 @@ local highlights = {
     -- Cursor
     { 'Cursor',         green.normal,   green.normal                },
     { 'CursorColumn',   green.normal,   green.normal                },
-    { 'CursorLine',     yellow.lightest,yellow.darkest              },
+    { 'CursorLine',     nil,            green.darkest               },
     { 'CursorLineNr',   green.normal,   green.normal                },
 
     -- Columns
@@ -64,13 +64,19 @@ local highlights = {
 --}}}
 
 -- Popup Menus {{{
+    -- Notifications
+    { "NotifyBackground", green.dark,             gray.darker              },
     -- Popup menu background
-    { 'Pmenu',          yellow.lightest,     gray.darker,           },
-    { 'PMenuSel',       yellow.lightest,     gray.darker,           },
+    { 'Pmenu',          gray.lightest,     gray.darkest,           },
+    { 'PMenuSel',       yellow.lightest,   gray.darkest,           },
 --}}}
 
 -- Status {{{
     { 'StatusLine',     gray.lightest,      gray.normal,      'bold'      },
+--}}}
+
+-- Markdown {{{
+    { 'Title',          yellow.normal, nil,         'bold'          },
 --}}}
 
 -- Programming Language {{{
@@ -93,6 +99,13 @@ local highlights = {
     { 'BuiltInType',    green.dark                                  },
     { 'Type',           green.lighter                               },
 --}}}
+}
+--}}}
+
+-- Markdown links {{{
+local markdownLinks = {
+    { 'MarkdownH1Delimiter',            'Title'                     },
+    { 'lsp_markdown4',                  'Normal'                    },
 }
 --}}}
 
@@ -136,12 +149,18 @@ for _, hi in ipairs(highlights) do
     if hi[4] ~= nil then
         gui = hi[4]
     end
-    vim.cmd(string.format("highlight %s guifg=%s guibg=%s gui=%s", hi[1], hi[2], bg, gui))
+    vim.cmd(string.format("hi %s guifg=%s guibg=%s gui=%s", hi[1], hi[2], bg, gui))
 end
 
--- Set the links
+-- Set Markdown links
+for _, link in ipairs(markdownLinks) do
+    local cmd = string.format("hi link %s %s", link[1], link[2])
+    vim.cmd(cmd)
+end
+
+-- Set Rust links
 for _, link in ipairs(rustLinks) do
-    local cmd = string.format("highlight link %s %s", link[1], link[2])
+    local cmd = string.format("hi link %s %s", link[1], link[2])
     vim.cmd(cmd)
 end
 --}}}
