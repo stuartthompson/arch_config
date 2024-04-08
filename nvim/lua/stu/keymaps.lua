@@ -3,6 +3,7 @@ vim.api.nvim_set_keymap('n', '<Leader>i', ':Inspect<CR>', { noremap = true, sile
 local wk = require("which-key")
 local ts = require("telescope.builtin")
 local gs = require("gitsigns")
+local dapui = require('dapui')
 
 -- Raw keymaps
 wk.register({
@@ -43,6 +44,11 @@ wk.register({
         x = { "<cmd>DapTerminate<cr>", "Terminate debugger" },
         o = { "<cmd>DapStepOver<cr>", "Step over" },
         i = { "<cmd>DapStepInto<cr>", "Step info" },
+        u = {
+            name = "Dap UI",
+            c = { dapui.close, "Close Dap UI" },
+            o = { dapui.open, "Open Dap UI" },
+        },
     },
     -- Telescope (Find Files)
     f = {
