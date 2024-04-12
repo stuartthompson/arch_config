@@ -1,0 +1,113 @@
+{
+    "workbench.colorTheme": "statn-penta",
+    "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "window.zoomLevel": 1.5,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "whichkey.show"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "whichkey.show"
+            ]
+        }
+    ],
+    "whichkey.bindingOverrides": [
+        {
+            "keys": "S.h",
+            "name": "Show hoverpoo",
+            "type": "command",
+            "command": "editor.action.showDefinitionPreviewHover",
+        },
+        {
+            "keys": "f",
+            "name": "+Focus...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "e",
+                    "name": "Focus editor",
+                    "type": "command",
+                    "command": "workbench.action.focusActiveEditorGroup"
+                },
+                {
+                    "key": "t",
+                    "name": "Focus terminal",
+                    "type": "command",
+                    "command": "workbench.action.terminal.focus"
+                }
+            ]
+        },
+        {
+            "keys": "m",
+            "name": "+ Marks...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "t",
+                    "name": "Toggle bookmark",
+                    "type": "command",
+                    "command": "bookmarks.toggle"
+                }, 
+                {
+                    "key": "n",
+                    "name": "Next bookmark",
+                    "type": "command",
+                    "command": "bookmarks.jumpToNext"
+                },
+                {
+                    "key": "p",
+                    "name": "Previous bookmark",
+                    "type": "command",
+                    "command": "bookmarks.jumpToPrevious"
+                },
+                {
+                    "key": "l",
+                    "name": "List bookmarks",
+                    "type": "command",
+                    "command": "bookmarks.list"
+                },
+                {
+                    "key": "a",
+                    "name": "List bookmarks in all files",
+                    "type": "command",
+                    "command": "bookmarks.listFromAllFiles"
+                },
+                {
+                    "key": "c",
+                    "name": "+ Clear...",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "f",
+                            "name": "Clear bookmarks in file",
+                            "type": "command",
+                            "command": "bookmarks.clear"
+                        },
+                        {
+                            "key": "a",
+                            "name": "Clear bookmarks in all files",
+                            "type": "command",
+                            "command": "bookmarks.clearFromAllFiles"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "workbench.settings.applyToAllProfiles": [
+    
+    ],
+}
