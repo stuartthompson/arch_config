@@ -1,13 +1,13 @@
 {
     "workbench.colorTheme": "statn-penta",
     "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace",
-    "editor.fontSize": 14,
+    "editor.fontSize": 12,
     "editor.fontLigatures": true,
     "window.zoomLevel": 1.5,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
-                "<space>"
+                "<capslock>"
             ],
             "commands": [
                 "whichkey.show"
@@ -17,7 +17,7 @@
     "vim.visualModeKeyBindingsNonRecursive": [
         {
             "before": [
-                "<space>"
+                "<capslock>"
             ],
             "commands": [
                 "whichkey.show"
@@ -27,20 +27,123 @@
     "whichkey.bindingOverrides": [
         {
             "keys": "S.h",
-            "name": "Show hoverpoo",
+            "name": "Show hover",
             "type": "command",
             "command": "editor.action.showDefinitionPreviewHover",
         },
         {
-            "keys": "f",
-            "name": "+Focus...",
+            "keys": "e",
+            "name": "+ Editor...",
             "type": "bindings",
             "bindings": [
                 {
-                    "key": "e",
-                    "name": "Focus editor",
+                    "key": "a",
+                    "name": "Focus active editor",
                     "type": "command",
                     "command": "workbench.action.focusActiveEditorGroup"
+                },
+                {
+                    "key": "g",
+                    "name": "+ Go to...",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+
+                        }
+                    ]
+                },
+                {
+                    "key": "m",
+                    "name": "+ Move...",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "H",
+                            "name": "Move active editor group left",
+                            "type": "command",
+                            "command": "workbench.action.moveActiveEditorGroupLeft"
+                        },
+                        {
+                            "key": "L",
+                            "name": "Move active editor group right",
+                            "type": "command",
+                            "command": "workbench.action.moveActiveEditorGroupRight"
+                        },
+                        {
+                            "key": "K",
+                            "name": "Move active editor group up",
+                            "type": "command",
+                            "command": "workbench.action.moveActiveEditorGroupUp"
+                        },
+                        {
+                            "key": "J",
+                            "name": "Move active editor group down",
+                            "type": "command",
+                            "command": "workbench.action.moveActiveEditorGroupDown"
+                        }
+                    ]
+                },
+                {
+                    "key": "s",
+                    "name": "+ Split...",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "h",
+                            "name": "Split left",
+                            "type": "command",
+                            "command": "workbench.action.splitEditorLeft"
+                        },
+                        {
+                            "key": "l",
+                            "name": "Split right",
+                            "type": "command",
+                            "command": "workbench.action.splitEditorRight"
+                        },
+                        {
+                            "key": "k",
+                            "name": "Split up",
+                            "type": "command",
+                            "command": "workbench.action.splitEditorUp"
+                        },
+                        {
+                            "key": "j",
+                            "name": "Split down",
+                            "type": "command",
+                            "command": "workbench.action.splitEditorDown"
+                        }
+                    ]
+                },
+                {
+                    "key": "c",
+                    "name": "+ Close ...",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "c",
+                            "name": "Close current editor",
+                            "type": "command",
+                            "command": "workbench.action.closeActiveEditor"
+                        },
+                        {
+                            "key": "g",
+                            "name": "Close current editor group",
+                            "type": "command",
+                            "command": "workbench.action.closeEditorsInGroup"
+                        }
+                    ]
+                },
+                {
+                    "key": "n",
+                    "name": "Next editor group",
+                    "type": "command",
+                    "command": ""
+                },
+                {
+                    "key": "p",
+                    "name": "Previous editor group",
+                    "type": "command",
+                    "command": ""
                 },
                 {
                     "key": "t",
@@ -48,6 +151,37 @@
                     "type": "command",
                     "command": "workbench.action.terminal.focus"
                 }
+            ]
+        },
+        {
+            "keys": "p",
+            "name": "+ Project...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "d",
+                    "name": "New directory",
+                    "type": "command",
+                    "command": "explorer.newFolder"
+                },
+                {
+                    "key": "f",
+                    "name": "New file",
+                    "type": "command",
+                    "command": "explorer.newFile"   
+                },
+                {
+                    "key": "e",
+                    "name": "Explorer (Focus)",
+                    "type": "command",
+                    "command": "workbench.files.action.focusFilesExplorer"
+                },
+                {
+                    "key": "c",
+                    "name": "Collapse all folders",
+                    "type": "command",
+                    "command": "workbench.files.action.collapseExplorerFolders"
+                }   
             ]
         },
         {
@@ -108,6 +242,8 @@
         }
     ],
     "workbench.settings.applyToAllProfiles": [
-    
+
     ],
+    "explorer.confirmDragAndDrop": false,
+    "javascript.updateImportsOnFileMove.enabled": "never",
 }
