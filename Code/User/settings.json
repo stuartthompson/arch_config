@@ -32,6 +32,12 @@
             "command": "editor.action.showDefinitionPreviewHover",
         },
         {
+            "keys": "\t",
+            "name": "Focus active editor",
+            "type": "command",
+            "command": "workbench.action.focusActiveEditorGroup"
+        },
+        {
             "keys": "e",
             "name": "+ Editor...",
             "type": "bindings",
@@ -48,7 +54,40 @@
                     "type": "bindings",
                     "bindings": [
                         {
-
+                            "key": "h",
+                            "name": "Previous editor",
+                            "type": "command",
+                            "command": "workbench.action.previousEditorInGroup"
+                        },
+                        {
+                            "key": "l",
+                            "name": "Next editor",
+                            "type": "command",
+                            "command": "workbench.action.nextEditorInGroup"
+                        },
+                        {
+                            "key": "H",
+                            "name": "Previous editor (all groups)",
+                            "type": "command",
+                            "command": "workbench.action.previousEditor",
+                        },
+                        {
+                            "key": "L",
+                            "name": "Next editor (all groups)",
+                            "type": "command",
+                            "command": "workbench.action.nextEditor",
+                        },
+                        {
+                            "key": "[",
+                            "name": "Previous group",
+                            "type": "command",
+                            "command": "workbench.action.focusPreviousGroup"
+                        },
+                        {
+                            "key": "]",
+                            "name": "Next group",
+                            "type": "command",
+                            "command": "workbench.action.focusNextGroup"
                         }
                     ]
                 },
@@ -111,6 +150,12 @@
                             "name": "Split down",
                             "type": "command",
                             "command": "workbench.action.splitEditorDown"
+                        },
+                        {
+                            "key": "i",
+                            "name": "Split inline",
+                            "type": "command",
+                            "command": "workbench.action.toggleSplitEditorInGroup"
                         }
                     ]
                 },
@@ -129,28 +174,34 @@
                             "key": "g",
                             "name": "Close current editor group",
                             "type": "command",
-                            "command": "workbench.action.closeEditorsInGroup"
-                        }
+                            "command": "workbench.action.closeEditorsAndGroup"
+                        },
+                        {
+                            "key": "o",
+                            "name": "Close other editors in group",
+                            "type": "command",
+                            "command": "workbench.action.closeOtherEditors"
+                        },
+                        {
+                            "key": "r",
+                            "name": "Close editors to the right",
+                            "type": "command",
+                            "command": "workbench.action.closeEditorsToTheRight"   
+                        },
+                        {
+                            "key": "s",
+                            "name": "Close saved editors in group",
+                            "type": "command",
+                            "command": "workbench.action.closeUnmodifiedEditors"
+                        },
                     ]
                 },
                 {
-                    "key": "n",
-                    "name": "Next editor group",
+                    "key": "u",
+                    "name": "Reopen last closed editor",
                     "type": "command",
-                    "command": ""
+                    "command": "workbench.action.reopenClosedEditor"
                 },
-                {
-                    "key": "p",
-                    "name": "Previous editor group",
-                    "type": "command",
-                    "command": ""
-                },
-                {
-                    "key": "t",
-                    "name": "Focus terminal",
-                    "type": "command",
-                    "command": "workbench.action.terminal.focus"
-                }
             ]
         },
         {
@@ -239,6 +290,68 @@
                     ]
                 }
             ]
+        },
+        {
+            "keys": "w",
+            "name": "+ Window ...",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "t",
+                    "name": "Terminal",
+                    "type": "command",
+                    "command": "workbench.action.terminal.toggleTerminal"
+                },
+                {
+                    "key": "p",
+                    "name": "Problems",
+                    "type": "command",
+                    "command": "workbench.actions.view.problems"
+                },
+                {
+                    "key": "o",
+                    "name": "Output",
+                    "type": "command",
+                    "command": "workbench.action.output.toggleOutput"
+                },
+                {
+                    "key": "d",
+                    "name": "Debug console",
+                    "type": "command",
+                    "command": "workbench.debug.action.toggleRepl"
+                },
+                {
+                    "key": "n",
+                    "name": "+ Notifications...",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "s",
+                            "name": "Show/hide notifications",
+                            "type": "command",
+                            "command": "notifications.toggleList"
+                        },
+                        {
+                            "key": "c",
+                            "name": "Clear notifications",
+                            "type": "command",
+                            "command": "notifications.clearAll"
+                        },
+                        {
+                            "key": "q",
+                            "name": "Toggle do not disturb mode (no notifications)",
+                            "type": "command",
+                            "command": "notifications.toggleDoNotDisturbMode"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "keys": "z",
+            "name": "test",
+            "type": "command",
+            "command": "workbench.action.toggleSplitEditorInGroup"
         }
     ],
     "workbench.settings.applyToAllProfiles": [

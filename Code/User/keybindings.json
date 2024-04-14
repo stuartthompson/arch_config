@@ -1,2 +1,22 @@
 // Place your key bindings in this file to override the defaults
-[]
+[
+    {
+        "key": "capslock",
+        "command": "whichkey.show"
+    },
+    {
+        "key": "space",
+        "command": "-debug.toggleBreakpoint",
+        "when": "breakpointsFocused && !inputFocus"
+    },
+    {
+        "key": "space",
+        "command": "-notification.toggle",
+        "when": "notificationFocus"
+    },
+    {
+        "key": "space",
+        "command": "-refactorPreview.toggleCheckedState",
+        "when": "listFocus && refactorPreview.enabled && !inputFocus && !treestickyScrollFocused"
+    }
+]
