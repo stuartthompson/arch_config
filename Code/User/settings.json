@@ -395,10 +395,46 @@
             "type": "bindings",
             "bindings": [
                 {
-                    "key": "s",
+                    "key": "f",
                     "name": "Stage file",
                     "type": "command",
-                    "command": "git.stageFile"
+                    "command": "git.stage"
+                },
+                {
+                    "key": "F",
+                    "name": "Unstage file",
+                    "type": "command",
+                    "command": "git.unstage"
+                },
+                {
+                    "key": "a",
+                    "name": "Stage all changes",
+                    "type": "command",
+                    "command": "git.stageAll"
+                },
+                {
+                    "key": "A",
+                    "name": "Unstage all changes",
+                    "type": "command",
+                    "command": "git.unstageAll"
+                },
+                {
+                    "key": "h",
+                    "name": "Stage hunk",
+                    "type": "command",
+                    "command": "git.stageSelectedRanges"
+                },
+                {
+                    "key": "r",
+                    "name": "Reset file (requires confirmation)",
+                    "type": "command",
+                    "command": "git.clean"
+                },
+                {
+                    "key": "R",
+                    "name": "Reset all changes (requires confirmation)",
+                    "type": "command",
+                    "command": "git.cleanAll"
                 }
             ]
         },
@@ -466,6 +502,7 @@
         }
     ],
     "workbench.settings.applyToAllProfiles": [
+
     ],
     "explorer.confirmDragAndDrop": false,
     "javascript.updateImportsOnFileMove.enabled": "never",
