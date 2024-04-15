@@ -24,7 +24,45 @@
             ]
         }
     ],
+    "whichkey.sortOrder": "none",
     "whichkey.bindingOverrides": [
+        {
+            "keys": ".",
+            "name": "huh?",
+            "position": 4
+        },
+        {
+            "keys": "?",
+            "position": -1
+        },
+        {
+            "keys": "!",
+            "position": -1
+        },
+        {
+            "keys": "b",
+            "position": -1
+        },
+        {
+            "keys": "f",
+            "position": -1
+        },
+        {
+            "keys": "i",
+            "position": -1
+        },
+        {
+            "keys": "r",
+            "position": -1
+        },
+        {
+            "keys": "S",
+            "position": -1
+        },
+        {
+            "keys": "t",
+            "position": -1
+        },
         {
             "keys": "S.h",
             "name": "Show hover",
@@ -32,14 +70,23 @@
             "command": "editor.action.showDefinitionPreviewHover",
         },
         {
+            "keys": " ",
+            "name": "VSCode command palette",
+            "position": 1,
+            "type": "command",
+            "command": "workbench.action.showCommands"
+        },
+        {
             "keys": "\t",
             "name": "Focus active editor",
+            "position": 1,
             "type": "command",
             "command": "workbench.action.focusActiveEditorGroup"
         },
         {
             "keys": "e",
             "name": "+ Editor...",
+            "position": 3,
             "type": "bindings",
             "bindings": [
                 {
@@ -207,6 +254,7 @@
         {
             "keys": "p",
             "name": "+ Project...",
+            "position": 4,
             "type": "bindings",
             "bindings": [
                 {
@@ -233,6 +281,125 @@
                     "type": "command",
                     "command": "workbench.files.action.collapseExplorerFolders"
                 }   
+            ]
+        },
+        {
+            "keys": "w",
+            "name": "+ Window ...",
+            "position": 5,
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "e",
+                    "name": "Explorer",
+                    "type": "command",
+                    "command": "workbench.files.action.focusFilesExplorer"
+                },
+                {
+                    "key": "s",
+                    "name": "Search",
+                    "type": "command",
+                    "command": "workbench.action.findInFiles"
+                },
+                {
+                    "key": "g",
+                    "name": "Source control",
+                    "type": "command",
+                    "command": "workbench.scm.focus"
+                },
+                {
+                    "key": "r",
+                    "name": "Run & Debug",
+                    "type": "command",
+                    "command": "workbench.view.debug"
+                },
+                {
+                    "key": "m",
+                    "name": "Bookmarks",
+                    "type": "command",
+                    "command": "bookmarksExplorer.focus"
+                },
+                {
+                    "key": "t",
+                    "name": "Terminal",
+                    "type": "command",
+                    "command": "workbench.action.terminal.toggleTerminal"
+                },
+                {
+                    "key": "p",
+                    "name": "Problems",
+                    "type": "command",
+                    "command": "workbench.actions.view.problems"
+                },
+                {
+                    "key": "o",
+                    "name": "Output",
+                    "type": "command",
+                    "command": "workbench.action.output.toggleOutput"
+                },
+                {
+                    "key": "d",
+                    "name": "Debug console",
+                    "type": "command",
+                    "command": "workbench.debug.action.toggleRepl"
+                },
+                {
+                    "key": "n",
+                    "name": "+ Notifications...",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "s",
+                            "name": "Show/hide notifications",
+                            "type": "command",
+                            "command": "notifications.toggleList"
+                        },
+                        {
+                            "key": "c",
+                            "name": "Clear notifications",
+                            "type": "command",
+                            "command": "notifications.clearAll"
+                        },
+                        {
+                            "key": "q",
+                            "name": "Toggle do not disturb mode (no notifications)",
+                            "type": "command",
+                            "command": "notifications.toggleDoNotDisturbMode"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "keys": "n",
+            "name": "+ Navigation...",
+            "position": 6,
+            "type": "bindings",
+            "bindings": [
+
+            ]
+        },
+        {
+            "keys": "d",
+            "name": "+ Debug...",
+            "position": 7,
+            "type": "bindings",
+            "bindings": [
+
+            ]
+        },
+        {
+            "keys": "g",
+            "name": "+ Git...",
+            "position": "8",
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "s",
+                    "name": "Stage file",
+                    "type": "command",
+                    "command": "git.stageFile"
+                }
             ]
         },
         {
@@ -292,70 +459,13 @@
             ]
         },
         {
-            "keys": "w",
-            "name": "+ Window ...",
-            "type": "bindings",
-            "bindings": [
-                {
-                    "key": "t",
-                    "name": "Terminal",
-                    "type": "command",
-                    "command": "workbench.action.terminal.toggleTerminal"
-                },
-                {
-                    "key": "p",
-                    "name": "Problems",
-                    "type": "command",
-                    "command": "workbench.actions.view.problems"
-                },
-                {
-                    "key": "o",
-                    "name": "Output",
-                    "type": "command",
-                    "command": "workbench.action.output.toggleOutput"
-                },
-                {
-                    "key": "d",
-                    "name": "Debug console",
-                    "type": "command",
-                    "command": "workbench.debug.action.toggleRepl"
-                },
-                {
-                    "key": "n",
-                    "name": "+ Notifications...",
-                    "type": "bindings",
-                    "bindings": [
-                        {
-                            "key": "s",
-                            "name": "Show/hide notifications",
-                            "type": "command",
-                            "command": "notifications.toggleList"
-                        },
-                        {
-                            "key": "c",
-                            "name": "Clear notifications",
-                            "type": "command",
-                            "command": "notifications.clearAll"
-                        },
-                        {
-                            "key": "q",
-                            "name": "Toggle do not disturb mode (no notifications)",
-                            "type": "command",
-                            "command": "notifications.toggleDoNotDisturbMode"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "keys": "z",
             "name": "test",
             "type": "command",
-            "command": "workbench.action.toggleSplitEditorInGroup"
+            "command": "workbench.action.openGlobalKeybindings"
         }
     ],
     "workbench.settings.applyToAllProfiles": [
-
     ],
     "explorer.confirmDragAndDrop": false,
     "javascript.updateImportsOnFileMove.enabled": "never",
