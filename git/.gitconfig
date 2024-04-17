@@ -53,7 +53,7 @@ llag = ll --all --graph
 llg = ll --graph
 ls = log --format=format:'%C(dim white)%<(16)%ch%C(reset) %C(bold cyan)%h%C(reset) %C(bold magenta)%s%C(reset) %C(bold yellow)%d%C(reset)'
 lv = log --format=format:'%C(dim white)%ci%C(reset) %C(bold cyan)%h%C(reset) %C(green)%t%C(reset) %C(yellow)%<(15)%p%C(reset) %C(bold red)%<(24)%S%C(reset) %C(bold magenta)%s%C(reset) %C(bold yellow)%d%C(reset)'
-lt = !~/.git-scripts/git-log-tail
+lt = !~/.config/git/scripts/git-log-tail.sh
 m = merge
 mt = mergetool
 pl = pull
