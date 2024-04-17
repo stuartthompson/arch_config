@@ -19,6 +19,7 @@ printf "\n"
     fi
 }
 
+# Function used to get the size of a blob
 format_blob_size() {
     local hash=$1
     local size=$(git cat-file -s $hash)
@@ -35,7 +36,6 @@ format_blob_size() {
         blob_size="${size}b"
     fi
 }
-
 
 # Function to print a tree object
 print_tree() {
