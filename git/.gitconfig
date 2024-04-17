@@ -1,0 +1,69 @@
+[user]
+	email = stuart@stuartthompson.net
+    name = Stuart Thompson
+
+[core]
+    pager = delta
+
+[delta]
+    navigate = true     # use n and N to move between diff sections
+    dark = true
+    side-by-side = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[init]
+	defaultBranch = main
+
+[alias]
+a = add
+aa = add --all
+b = checkout -b
+ba = branch --all
+bd = branch -d
+bib = bisect bad
+big = bisect good
+bir = bisect reset
+bis = bisect start
+c = commit -m
+ca = commit -am
+cl = clone
+cf = cat-file -p
+cfa = cat-file --batch-check='%(objectname) %(objecttype)' --batch-all-objects
+co = checkout
+cp = cherry-pick
+d = diff
+dno = diff --name-only
+do = !~/.git-scripts/dump-object
+dt = difftool
+f = fetch
+l = log
+la = log --format=format:'%C(dim white)%ch%C(reset) %C(bold cyan)%h%C(reset) %C(yellow)%<(15)%p%C(reset) %C(red)%an%C(reset) %C(bold magenta)%s%C(reset) %C(bold yellow)%d%C(reset)'
+lc = log --format=format:'%C(bold cyan)%h%C(reset) %C(bold magenta)%s%C(reset) %C(bold yellow)%d%C(reset)'
+lca = lc --all
+lcag = lc --all --graph
+lcg = lc --graph
+ll = log --format=format:'%C(dim white)%ci%C(reset) %C(bold cyan)%h%C(reset) %C(green)%t%C(reset) %C(yellow)%<(15)%p%C(reset) %C(bold magenta)%s%C(reset) %C(bold yellow)%d%C(reset)'
+lla = ll --all
+llag = ll --all --graph
+llg = ll --graph
+ls = log --format=format:'%C(dim white)%<(16)%ch%C(reset) %C(bold cyan)%h%C(reset) %C(bold magenta)%s%C(reset) %C(bold yellow)%d%C(reset)'
+lv = log --format=format:'%C(dim white)%ci%C(reset) %C(bold cyan)%h%C(reset) %C(green)%t%C(reset) %C(yellow)%<(15)%p%C(reset) %C(bold red)%<(24)%S%C(reset) %C(bold magenta)%s%C(reset) %C(bold yellow)%d%C(reset)'
+lt = !~/.git-scripts/git-log-tail
+m = merge
+mt = mergetool
+pl = pull
+ps = push
+ra = restore --staged .
+rba = rebase --abort
+rbc = rebase --continue
+rbi = rebase -i
+rbo = rebase -onto
+rl = rev-list --all
+rl0 = rev-list --max-parents=0 HEAD
+rlc1 = rev-list --max-count=1
+s = status
