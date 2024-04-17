@@ -28,11 +28,6 @@
     "whichkey.sortOrder": "none",
     "whichkey.bindingOverrides": [
         {
-            "keys": ".",
-            "name": "huh?",
-            "position": 4
-        },
-        {
             "keys": "?",
             "position": -1
         },
@@ -234,7 +229,7 @@
                             "key": "r",
                             "name": "Close editors to the right",
                             "type": "command",
-                            "command": "workbench.action.closeEditorsToTheRight"   
+                            "command": "workbench.action.closeEditorsToTheRight"
                         },
                         {
                             "key": "s",
@@ -268,7 +263,7 @@
                     "key": "f",
                     "name": "New file",
                     "type": "command",
-                    "command": "explorer.newFile"   
+                    "command": "explorer.newFile"
                 },
                 {
                     "key": "e",
@@ -281,7 +276,7 @@
                     "name": "Collapse all folders",
                     "type": "command",
                     "command": "workbench.files.action.collapseExplorerFolders"
-                }   
+                }
             ]
         },
         {
@@ -376,18 +371,14 @@
             "name": "+ Navigation...",
             "position": 6,
             "type": "bindings",
-            "bindings": [
-
-            ]
+            "bindings": []
         },
         {
             "keys": "d",
             "name": "+ Debug...",
             "position": 7,
             "type": "bindings",
-            "bindings": [
-
-            ]
+            "bindings": []
         },
         {
             "keys": "g",
@@ -442,6 +433,7 @@
         {
             "keys": "m",
             "name": "+ Marks...",
+            "position": 9,
             "type": "bindings",
             "bindings": [
                 {
@@ -449,7 +441,7 @@
                     "name": "Toggle bookmark",
                     "type": "command",
                     "command": "bookmarks.toggle"
-                }, 
+                },
                 {
                     "key": "n",
                     "name": "Next bookmark",
@@ -496,15 +488,81 @@
             ]
         },
         {
+            "keys": "f",
+            "name": "+ Folding...",
+            "position": 10,
+            "type": "bindings",
+            "bindings": [
+                {
+                    "key": "f",
+                    "name": "Fold",
+                    "type": "command",
+                    "command": "editor.fold"
+                },
+                {
+                    "key": "u",
+                    "name": "Unfold",
+                    "type": "command",
+                    "command": "editor.unfold"
+                },
+                {
+                    "key": "a",
+                    "name": "Fold All",
+                    "type": "command",
+                    "command": "editor.foldAll"
+                },
+                {
+                    "key": "U",
+                    "name": "Unfold all",
+                    "type": "command",
+                    "command": "editor.unfoldAll"
+                },
+                {
+                    "key": "r",
+                    "name": "Fold recursively",
+                    "type": "command",
+                    "command": "editor.foldRecursively"
+                },
+                {
+                    "key": "R",
+                    "name": "Unfold recursively",
+                    "type": "command",
+                    "command": "editor.unfoldRecursively"
+                },
+                {
+                    "key": "1",
+                    "name": "Fold level 1",
+                    "type": "command",
+                    "command": "editor.foldLevel1"
+                },
+                {
+                    "key": "2",
+                    "name": "Fold level 2",
+                    "type": "command",
+                    "command": "editor.foldLevel2"
+                },
+                {
+                    "key": "3",
+                    "name": "Fold level 3",
+                    "type": "command",
+                    "command": "editor.foldLevel3"
+                },
+                {
+                    "key": "4",
+                    "name": "Fold level 4",
+                    "type": "command",
+                    "command": "editor.foldLevel4"
+                }
+            ]
+        },
+        {
             "keys": "z",
             "name": "test",
             "type": "command",
             "command": "workbench.action.openGlobalKeybindings"
         }
     ],
-    "workbench.settings.applyToAllProfiles": [
-
-    ],
+    "workbench.settings.applyToAllProfiles": [],
     "explorer.confirmDragAndDrop": false,
     "javascript.updateImportsOnFileMove.enabled": "never",
 }
