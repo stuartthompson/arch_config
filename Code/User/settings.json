@@ -371,7 +371,33 @@
             "name": "+ Navigation...",
             "position": 6,
             "type": "bindings",
-            "bindings": []
+            "bindings": [
+                {
+                    "key": "r",
+                    "name": "+ References...",
+                    "type": "bindings",
+                    "bindings": [
+                        {
+                            "key": "f",
+                            "name": "Find references",
+                            "type": "command",
+                            "command": "references-view.findReferences"
+                        },
+                        {
+                            "key": "[",
+                            "name": "Previous reference",
+                            "type": "command",
+                            "command": "references-view.prev"
+                        },
+                        {
+                            "key": "]",
+                            "name": "Next reference",
+                            "type": "command",
+                            "command": "references-view.next"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "keys": "d",
